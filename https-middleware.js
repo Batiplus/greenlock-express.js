@@ -27,11 +27,11 @@ SanitizeHost.create = function(gl, app) {
         }
 
         // if there were unallowed characters, complain
-        if (safehost.length !== hostname.length) {
-            res.statusCode = 400;
-            res.end("Malformed HTTP Header: 'Host: " + hostname + "'");
-            return;
-        }
+        //if (safehost.length !== hostname.length) {
+        //    res.statusCode = 400;
+        //    res.end("Malformed HTTP Header: 'Host: " + hostname + "'");
+        //    return;
+        //}
 
         // Note: This sanitize function is also called on plain sockets, which don't need Domain Fronting checks
         if (req.socket.encrypted) {
